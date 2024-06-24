@@ -1,2 +1,2 @@
-export const baseUrl = "https://message-project-r4mo0bbsz-angelvocs-projects.vercel.app/"
+export const baseUrl = "https://message-project-nine.vercel.app/"
 
