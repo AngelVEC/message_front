@@ -1,7 +1,6 @@
 import './App.css';
 import Topbar from './components/Topbar';
-import { Route } from 'react-router-dom';
-import { Routes } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Home from './components/Home';
 import ChatRoom from './components/ChatRoom';
 
@@ -13,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/chatroom" element={<ChatRoom />} />
       </Routes>
+      <h1>Welcome</h1>
     </div>
   );
 }
