@@ -16,7 +16,7 @@ function ChatRoom(props) {
 
         axios.request(config)
         .then((response) => {
-        console.log(JSON.stringify(response.data));
+        setChatRoom(response.data);
         })
         .catch((error) => {
         console.log(error);
@@ -27,8 +27,8 @@ function ChatRoom(props) {
         <div>
             <h1>Chat Room</h1>
             <ul>
-                {chatRoom.map((chatRoom) => (
-                    <li key={chatRoom.id}>{chatRoom.name}</li>
+                {chatRoom.map((chatRooms) => (
+                    <li key={chatRooms.id}>{chatRooms.name}</li>
                 ))} 
             </ul>
         </div>
