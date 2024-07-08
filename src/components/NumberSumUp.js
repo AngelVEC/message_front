@@ -17,10 +17,10 @@ function NumberSumUp(props) {
 
     function cal() 
     {
-        let data = JSON.stringify({
-            "start_num": startNum,
-            "end_num": endNum
-          });
+        let data = {
+            "start_num": Number(startNum),
+            "end_num": Number(endNum)
+          };
           
           let config = {
             method: 'post',
