@@ -47,7 +47,7 @@ function NumberSumUp(props) {
             <p>Start Number: <input type={"number"} id={"startNum"} onChange={start_num_handler}/> </p>
             <p>End Number: <input type={"number"} id={"endNum"} onChange={end_num_handler}/> </p>
             <button id={"calculate"} onClick= {cal}> Calculate </button>
-            <p>Result = {result}</p>
+            <p id= "result">Result = {result}</p>
         </div>
     );
 }
