@@ -4,6 +4,17 @@ import { baseUrl } from '../constant';
 
 function ChatRoom(props) {
     const [chatRoom, setChatRoom] = useState([]);
+    const [comment, setComment] = useState("")
+
+    useEffect(() => {
+        if (localStorage.getItem('authentication') === null) {
+          setComment("Please login first")
+          
+          }
+        else {
+          setComment("")
+        }
+      }, []);
 
     useEffect(() => {
     
@@ -11,7 +22,9 @@ function ChatRoom(props) {
         method: 'get',
         maxBodyLength: Infinity,
         url: baseUrl + 'chat/chatroom/',
-        headers: { }
+        headers: {
+            'Authorization': "token " + localStorage.getItem('authentication')
+         }
         };
 
         axios.request(config)
@@ -31,6 +44,8 @@ function ChatRoom(props) {
                     <li key={chatRooms.id}>{chatRooms.name}</li>
                 ))} 
             </ul>
+
+            <p id="comment">{comment}</p>
         </div>
     );
 }
