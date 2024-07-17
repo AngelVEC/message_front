@@ -16,6 +16,7 @@ function Topbar() {
             <Nav.Link href="/chatroom">Chat Room</Nav.Link>
             <Nav.Link href="/sumUpNum">Number</Nav.Link>
             <Nav.Link href="/logout">Logout</Nav.Link>
+            <Nav.Link href="/createChatroom">Create Chat Room</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
